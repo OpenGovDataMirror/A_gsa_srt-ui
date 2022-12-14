@@ -1,0 +1,67 @@
+.no-padding {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.list {
+    margin-bottom: 10px;
+}
+
+.list-title {
+    font-weight: 400;
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+.list-content {
+    font-weight: 600;
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+#detail {
+position: relative;
+font-size: 16px;
+}
+
+.liststyle{
+    list-style: none;
+    line-height: 18px
+}
+
+#rbutton{
+    vertical-align: top;
+}
+
+
+.summary-content-padding{
+  padding: 30px 20px
+}
+
+.row {
+  padding-bottom: 10px;
+}
+
+#rbutton div.srt-button {
+  float: none;
+  margin-bottom: 10px;
+}
+
+#na-checkbox div {
+  font-size: 20px;
+  padding: 0;
+  line-height: 30px;
+}
+
+#na_check {
+  height: 20px;
+  width: 20px;
+  display: inline;
+  margin-left:5px;
+  top:2px;
+  position: relative;
+}
+
+#na-checkbox label {
+  display: inline;
+}

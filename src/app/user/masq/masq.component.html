@@ -1,0 +1,43 @@
+<main id="content" class="bypass-block-target">
+
+  <div style="padding: 0px">
+
+
+
+      <div>
+        <form [formGroup]="masqForm" (ngSubmit)="onSubmit(masqForm)">
+          <div class="row">
+            <div class="col-xs-2" style="text-align: right">
+              <label for="agency">Agency:</label>
+            </div>
+            <div class="col-xs-10">
+              <input placeholder="" formControlName="agency" id="agency"/>
+            </div>
+          </div>
+
+          <div class="row" style="padding-top: 10px;">
+            <div class="col-xs-2" style="text-align: right">
+              <label for="role">User type:</label>
+            </div>
+            <div class="col-xs-10">
+              <select placeholder="Just a placeholder" formControlName="role" id="role">
+                <option value="Administrator">GSA Admin</option>
+                <option value="SRT Program Manager">SRT Admin</option>
+                <option value="Section 508 Coordinator">Section 508 Coordinator</option>
+                <option value="CO / COR">CO / COR</option>
+                <option value="Executive User">Executive User</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row" style="padding-top: 10px;">
+            <div class="col-xs-2" style="text-align: right">
+              <button type="submit">Submit</button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+</main>

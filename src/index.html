@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>Solicitation Review Tool</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+  <script>
+      __Zone_enable_cross_context_check = true;
+  </script>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <app-root>Loading...</app-root>
+
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+    integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+    crossorigin="anonymous"></script>
+  <script src="https://use.fontawesome.com/22ad9bb71f.js"></script>
+
+
+  <script>
+
+    function casCheck() {
+        const ticketParam = window.location.search.substr(1).split('&').map(function (x) {
+            return x.split('=');
+        }).filter(function (x) {
+            return x[0] === 'token';
+        });
+
+        if (ticketParam.length > 0) {
+        const data = JSON.parse(decodeURIComponent(ticketParam[0][1]));
+        localStorage.setItem('agency', data.agency);
+        localStorage.setItem('email', data.email);
+        localStorage.setItem('firstName', data.firstName);
+        localStorage.setItem('id', data.id);
+        localStorage.setItem('lastName', data.lastName);
+        localStorage.setItem('position', data.position);
+        localStorage.setItem('token', data.token);
+        localStorage.setItem('userRole', data.userRole);
+        window.location = '/';
+      }
+      return false;
+    }
+
+    casCheck()
+
+
+
+    // TO-DO: build this into an angular hook rather than this hack
+    function errorUpdater() {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has("error")) {
+            const el = document.getElementById("login-error");
+            el.innerHTML = `<p>${urlParams.get('error')}</p>`;
+      }
+    }
+    setTimeout( errorUpdater, 1000);
+
+
+  </script>
+
+
+
+</body>
+</html>

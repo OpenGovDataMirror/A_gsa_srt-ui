@@ -1,0 +1,94 @@
+.faq-content-div {
+  padding: 50px 0px;
+}
+
+.faq-right-content h2 {
+  padding: 0px 0px 20px 0px;
+  margin: 0px;
+  color: #155394;
+}
+
+.faq-right-content {
+  padding: 0px 0px 0px 20px;
+}
+
+
+.search-input {
+border-top-left-radius: 5px;
+border-bottom-left-radius: 5px;
+height: 45px;
+min-width: 300px;
+border: 1px solid #205493;
+outline: none;
+box-shadow: none;
+padding: 0px 10px;
+font-weight: 500;
+font-size: 16px;
+}
+
+.search-button {
+border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;
+width: 75px;
+background-color: #205493;
+border-color: #205493;
+color: white;
+font-size: 20px;
+font-weight: 500;
+height: 45px;
+text-align: center;
+}
+
+.no-padding {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+.panel-group .panel {
+  border-radius: 0;
+  border: none;
+}
+
+.panel-group {
+  margin-bottom: 40px;
+}
+
+.panel-body {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.panel {
+  box-shadow: none;
+}
+
+a.panel-link {
+  color: black;
+}
+
+a.panel-link:hover {
+  text-decoration: none;
+}
+
+.panel-link:after {
+  /*noinspection CssNoGenericFontName*/
+  font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
+  content: "\2212";    /* adjust as needed, taken from bootstrap.css */
+  color: inherit;         /* adjust as needed */
+  font-size: 10px;
+  display: inline-block;
+  width: 25px;
+  text-align: right;
+}
+
+.panel-link.collapsed:after {
+  /* symbol for "collapsed" panels */
+  content: "\2b";    /* adjust as needed, taken from bootstrap.css */
+}
+
+@media (max-width: 1200px)
+{
+  .usa-sidenav-list {
+      display: none;
+  }
+}
